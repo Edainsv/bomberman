@@ -24,12 +24,16 @@ body {
 }
 
 /* LES BLOCKS DESIGN */
-.b-walk-herbe {
+.block_grass {
 	background-image: url(../img/herbe.jpg);
 	background-size: cover;	
 }
 
-.b-incassable {
+.block_breakable {
+
+}
+
+.block_unbreakable {
 	background-image: url(../img/blockIncassable.png);
 	box-shadow: 2px 2px 10px black;
 	background-size: cover;

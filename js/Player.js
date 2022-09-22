@@ -19,16 +19,15 @@ class Player {
 
 		switch (key) {
 			case 37: // Gauche
-				if (this.map.position[this.posX][this.posY-1].classList.contains('b-walk-herbe')) {
+				if (this.map.position[this.posX][this.posY-1].classList.contains(this.map.blocks.grass)) {
 					player.remove();
 					this.posY--;
 					this.map.position[this.posX][this.posY].appendChild(player)
 				}
 				break;
 				
-			case 38: // Haut
-				
-				if (this.map.position[this.posX-1][this.posY].classList.contains('b-walk-herbe')) {
+			case 38: // Haut				
+				if (this.map.position[this.posX-1][this.posY].classList.contains(this.map.blocks.grass)) {
 					player.remove();
 					this.posX--;
 					this.map.position[this.posX][this.posY].appendChild(player);
@@ -36,7 +35,7 @@ class Player {
 				break;
 				
 			case 39: // Droite				
-				if (this.map.position[this.posX][this.posY+1].classList.contains('b-walk-herbe')) {
+				if (this.map.position[this.posX][this.posY+1].classList.contains(this.map.blocks.grass)) {
 					player.remove();
 					this.posY++;
 					this.map.position[this.posX][this.posY].appendChild(player);
@@ -44,7 +43,7 @@ class Player {
 				break;
 				
 			case 40: // Bas
-				if (this.map.position[this.posX+1][this.posY].classList.contains('b-walk-herbe')) {
+				if (this.map.position[this.posX+1][this.posY].classList.contains(this.map.blocks.grass)) {
 					player.remove();
 					this.posX++;
 					this.map.position[this.posX][this.posY].appendChild(player);
