@@ -23,23 +23,6 @@ body {
 	align-items: center;
 }
 
-/* LES BLOCKS DESIGN */
-.block_grass {
-	background-image: url(../img/herbe.jpg);
-	background-size: cover;	
-}
-
-.block_breakable {
-	background-image: url(../img/brique.png);
-}
-
-.block_unbreakable {
-	background-image: url(../img/blockIncassable.png);
-	box-shadow: 2px 2px 10px black;
-	background-size: cover;
-	z-index: 99;
-}
-
 /* PERSONANGE */
 .perso {
 	width: 80%;
@@ -50,6 +33,33 @@ body {
 }
 
 
+/* LES BLOCKS DESIGN */
+.block_grass {
+	background-image: url(../img/herbe.jpg);
+	background-size: cover;	
+}
+
+.block_breakable {
+	background-image: url(../img/brique.png);
+	box-shadow: 2px 2px 10px black;
+	background-size: cover;
+	z-index: 99;
+	height: 100%;
+}
+
+.block_unbreakable {
+	background-image: url(../img/blockIncassable.png);
+	box-shadow: 2px 2px 10px black;
+	background-size: cover;
+	z-index: 99;
+}
+
+/* OBJETS */
+.normal_bomb {
+	background-image: url(../img/normal_bomb.png);
+	background-size: 100%;
+	z-index: 100;
+}
 
 
 

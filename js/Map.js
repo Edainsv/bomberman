@@ -60,7 +60,47 @@ class GameMap {
 			}
 		}
 
-		// this.position[5][5].classList.add(this.blocks.breakable);
+		this.generateBreakableBlocks();
+	}
+
+	generateBreakableBlocks() {
+		var max_blocks = 6 * this.sizeX; // Défini un nombre max de blocks
+		var blocks_casse = [];
+		var count = 0;
+
+
+		for (let i = 0; i < max_blocks; i++) {
+			blocks_casse[i] = document.createElement('div');
+			blocks_casse[i].classList.add('block_breakable');
+		}
+
+		for (let x = 1; x < this.sizeX - 1; x++) {
+			for (let y = 1; y < this.sizeY - 1; y++) {
+				if (this.isPossibleToPlaceBreakable(this.position[x][y])) {
+					this.position[x][y].classList.add(this.blocks.breakable); // Ajoute les blocks cassables
+				}
+			}
+		}
+	}
+
+	// Pour définir qu'il est impossible de placer des blocks à ces endroits !
+	isPossibleToPlaceBreakable(e) {
+		if (!e.classList.contains(this.blocks.unbreakable) &&
+			e != this.position[1][1] &&
+			e != this.position[1][2] &&
+			e != this.position[1][this.sizeY-2] &&
+			e != this.position[1][this.sizeY-3] &&
+			e != this.position[2][1] &&
+			e != this.position[2][this.sizeY-2] &&
+			e != this.position[this.sizeX-3][1] &&
+			e != this.position[this.sizeX-3][this.sizeY-2] &&
+			e != this.position[this.sizeX-2][1] &&
+			e != this.position[this.sizeX-2][2] &&
+			e != this.position[this.sizeX-2][this.sizeY-3] &&
+			e != this.position[this.sizeX-2][this.sizeY-2]
+			) {
+			return true;
+		}
 	}
 
 	getPosition(x, y) {
