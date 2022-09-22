@@ -30,7 +30,7 @@ body {
 }
 
 .block_breakable {
-
+	background-image: url(../img/brique.png);
 }
 
 .block_unbreakable {

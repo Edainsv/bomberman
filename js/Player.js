@@ -51,10 +51,10 @@ class Player {
 				break;
 
 			default:
-				// console.log(key);
+				// Retourne la touche pressée
+				console.log(key);
 				break;
 		}
-		this.getPosition();
 	}
 
 	isPossibleToWalk(e) {

@@ -12,7 +12,7 @@ class GameMap {
 		};
 	}
 
-	constructMap() {
+	initializeMap() {
 		// Définition de la map
 		for (let x = 0; x < this.sizeX; x++) {
 			this.position[x] = [];
@@ -59,6 +59,8 @@ class GameMap {
 				this.position[x][y].classList.remove(this.blocks.grass);
 			}
 		}
+
+		this.position[5][5].classList.add(this.blocks.breakable);
 	}
 
 	getPosition(x, y) {
