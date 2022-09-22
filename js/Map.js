@@ -60,7 +60,7 @@ class GameMap {
 			}
 		}
 
-		this.position[5][5].classList.add(this.blocks.breakable);
+		// this.position[5][5].classList.add(this.blocks.breakable);
 	}
 
 	getPosition(x, y) {
